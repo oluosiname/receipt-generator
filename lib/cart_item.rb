@@ -11,4 +11,18 @@ class CartItem
     @quantity = quantity
     @imported = imported
   end
+
+  def sales_tax
+    unit_sales_tax * quantity
+  end
+
+  def total_price
+    (price + unit_sales_tax) * quantity
+  end
+
+  private
+
+  def unit_sales_tax
+    @unit_sales_tax ||= TaxCalculator.new(price: price, imported: imported, name: name).total_sales_tax
+  end
 end
