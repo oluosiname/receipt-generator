@@ -29,7 +29,7 @@ The **Receipt Generator** is a Ruby-based project that calculates and prints rec
 1. **Clone the Repository**:
 
    ```bash
-   git clone <repository-url>
+   git clone git@github.com:oluosiname/receipt-generator.git
 
    cd receipt-generator
    ```
@@ -103,6 +103,7 @@ The **Receipt Generator** is a Ruby-based project that calculates and prints rec
 
 ## Project Structure
 
+```bash
 receipt-generator/
 ├── lib/
 │ ├── cart_item.rb # Handles item details and calculations
@@ -116,5 +117,7 @@ receipt-generator/
 │ ├── tax_calculator_spec.rb # Tests for TaxCalculator
 │ ├── receipt_spec.rb # Tests for Receipt
 │ └── fixtures/ # Input test files
+├── cart_app # startup script
 ├── Gemfile # Defines gem dependencies
 └── README.md # Project documentation
+```
